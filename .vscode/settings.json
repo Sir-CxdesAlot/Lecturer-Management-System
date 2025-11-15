@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": ["Lecturer_Mangement_System/src"],
+    "java.project.outputPath": "Lecturer_Mangement_System/bin",
+    "java.project.referencedLibraries": [
+        "Lecturer_Mangement_System/lib/mysql-connector-j-9.4.0.jar",
+        "C:/Java/javafx-sdk-21.0.8/lib/*.jar"
+    ],
+    "java.debug.settings.vmArgs": "--module-path \"C:/Java/javafx-sdk-21.0.8/lib\" --add-modules javafx.controls,javafx.fxml",
+    "java.debug.settings.forceBuildBeforeLaunch": true,
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

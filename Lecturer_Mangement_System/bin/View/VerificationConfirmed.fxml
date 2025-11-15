@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Card Pane with Drop Shadow -->
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.VerificationConfirmed">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="422.0" style="-fx-background-color: #202020; -fx-background-radius: 20;">
+       <effect>
+         <DropShadow color="#000000" offsetX="5" offsetY="5" radius="10" spread="0.1" />
+       </effect>
+       
+                <!-- Main VBox -->
+       <VBox alignment="CENTER" layoutX="61.0" layoutY="27.0" prefWidth="300" spacing="20">
+         <children>
+           <!-- Success Title -->
+           <Label style="-fx-font-size: 24px; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Verification Successful" />
+           
+                    <!-- Success Message -->
+           <Label maxWidth="280" style="-fx-text-fill: #BBBBBB; -fx-font-size: 14px;" text="We've sent a password reset link to your email address. Please check your inbox and follow the instructions to reset your password." textAlignment="CENTER" wrapText="true" />
+           
+                    <!-- Back Button -->
+           <Button minWidth="120" onAction="#handleBackToLogin" style="-fx-background-color: #3a3a3a;                        -fx-text-fill: #FFFFFF;                        -fx-background-radius: 10;                        -fx-font-weight: bold;" text="Back to Login">
+             <effect>
+               <DropShadow color="#000000" offsetX="2" offsetY="2" radius="5" spread="0.1" />
+             </effect>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+           </Button>
+         </children>
+       </VBox>
+      </Pane>
+   </children>
+</VBox>

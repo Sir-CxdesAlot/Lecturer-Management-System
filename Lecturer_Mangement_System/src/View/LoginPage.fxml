@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPage">
+   <children>
+    <!-- Card Pane with Drop Shadow -->
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300" prefWidth="400" style="-fx-background-color: #202020; -fx-background-radius: 20;">
+      <effect>
+        <DropShadow color="#000000" offsetX="5" offsetY="5" radius="10" spread="0.1" />
+      </effect>
+      <children>
+        <!-- Main VBox -->
+        <VBox alignment="CENTER" layoutX="50" layoutY="30" prefWidth="300" spacing="20">
+          <children>
+            <!-- Login Label -->
+            <Label style="-fx-font-size: 24px; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Login" />
+
+                        <!-- Form Grid -->
+            <GridPane alignment="CENTER" hgap="10" vgap="15">
+              <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+              </padding>
+              
+                          <Label style="-fx-text-fill: #FFFFFF;" text="Username" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+              <TextField fx:id="username" style="-fx-background-color: #2e2e2e;                                -fx-text-fill: #FFFFFF;                                -fx-prompt-text-fill: #AAAAAA;                                -fx-background-radius: 10;                                -fx-border-color: #444444;                                -fx-border-radius: 10;                                -fx-border-width: 1;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <cursor>
+                           <Cursor fx:constant="TEXT" />
+                        </cursor>
+                     </TextField>
+              
+                          <Label style="-fx-text-fill: #FFFFFF;" text="Password" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+              <PasswordField fx:id="password" style="-fx-background-color: #2e2e2e;                                    -fx-text-fill: #FFFFFF;                                    -fx-prompt-text-fill: #AAAAAA;                                    -fx-background-radius: 10;                                    -fx-border-color: #444444;                                    -fx-border-radius: 10;                                    -fx-border-width: 1;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <cursor>
+                           <Cursor fx:constant="TEXT" />
+                        </cursor>
+                     </PasswordField>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+            </GridPane>
+
+            <!-- Error Message Label -->
+            <Label fx:id="errorMessageLabel" style="-fx-text-fill: #ff4444; -fx-font-size: 12px;" visible="false" />
+
+                        <!-- Buttons HBox -->
+            <HBox alignment="CENTER" spacing="20">
+              <Button minWidth="100" onAction="#handleLogin" style="-fx-background-color: #3a3a3a;                              -fx-text-fill: #FFFFFF;                              -fx-background-radius: 10;                              -fx-font-weight: bold;" text="Login">
+                <effect>
+                  <DropShadow color="#000000" offsetX="2" offsetY="2" radius="5" spread="0.1" />
+                </effect>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+              </Button>
+              
+                          <Button onAction="#handleForgotPassword" style="-fx-background-color: transparent;                              -fx-text-fill: #BBBBBB;                              -fx-underline: true;                              -fx-border-width: 0;                              -fx-cursor: hand;" text="Forgot Password">
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+            </HBox>
+          </children>
+        </VBox>
+      </children>
+    </Pane>
+   </children>
+</VBox>

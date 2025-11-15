@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" prefWidth="760.0" spacing="20" style="-fx-background-color: #2e2e2e; -fx-background-radius: 10; -fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FacultyLecturers2">
+   <effect>
+      <DropShadow color="#000000" offsetX="0" offsetY="3" radius="5" spread="0.1" />
+   </effect>
+   <children>
+      <VBox spacing="5">
+         <children>
+            <Label fx:id="staffName" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Staff Name" />
+            <Label fx:id="staffNumber" style="-fx-text-fill: #CCCCCC;" text="Staff Number: " />
+            <Label fx:id="officeNumber" style="-fx-text-fill: #CCCCCC;" text="Office Number: " />
+            <Label fx:id="buildingLocation" style="-fx-text-fill: #CCCCCC;" text="Building Location: " />
+            <Label fx:id="phoneNumber" style="-fx-text-fill: #CCCCCC;" text="Phone: " />
+            <Label fx:id="specialty" style="-fx-text-fill: #CCCCCC;" text="Specialty: " />
+         </children>
+      </VBox>
+      <Pane HBox.hgrow="ALWAYS" />
+      <HBox alignment="CENTER_RIGHT" spacing="10">
+         <children>
+            <Label style="-fx-text-fill: #4CAF50;" text="Active" />
+            <Button onAction="#handleEdit" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10;" text="Edit">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button onAction="#handleDelete" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-background-radius: 10;" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+   </children>
+</HBox>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Card Pane with Drop Shadow -->
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.VerificationPage">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="252.0" prefWidth="490.0" style="-fx-background-color: #202020; -fx-background-radius: 20;">
+       <effect>
+         <DropShadow color="#000000" offsetX="5" offsetY="5" radius="10" spread="0.1" />
+       </effect>
+       
+                <!-- Main VBox -->
+       <VBox alignment="CENTER" layoutX="95.0" layoutY="36.0" prefWidth="300" spacing="20">
+         <children>
+           <!-- Title Label -->
+           <Label style="-fx-font-size: 24px; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Enter Verification Code" />
+           
+                    <!-- Instruction Text -->
+           <Label maxWidth="279.0" prefHeight="40.0" prefWidth="279.0" style="-fx-text-fill: #BBBBBB; -fx-font-size: 14px;" text="Enter the 6-digit code we sent to your email" wrapText="true" />
+           
+                    <!-- Code Input Field -->
+           <TextField prefWidth="200" promptText="6-digit code" style="-fx-background-color: #2e2e2e;                           -fx-text-fill: #FFFFFF;                           -fx-prompt-text-fill: #AAAAAA;                           -fx-background-radius: 10;                           -fx-border-color: #444444;                           -fx-border-radius: 10;                           -fx-border-width: 1;">
+                  <cursor>
+                     <Cursor fx:constant="TEXT" />
+                  </cursor>
+               </TextField>
+           
+                    <!-- Buttons HBox -->
+           <HBox alignment="CENTER" spacing="20">
+             <Button minWidth="120.0" onAction="#handleVerify" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #3a3a3a;                          -fx-text-fill: #FFFFFF;                          -fx-background-radius: 10;                          -fx-font-weight: bold;" text="Verify Code">
+               <effect>
+                 <DropShadow color="#000000" offsetX="2" offsetY="2" radius="5" spread="0.1" />
+               </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+             </Button>
+             
+                      <Button style="-fx-background-color: transparent;                          -fx-text-fill: #BBBBBB;                          -fx-underline: true;                          -fx-border-width: 0;                          -fx-cursor: hand;" text="Resend Code">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+           </HBox>
+         </children>
+       </VBox>
+      </Pane>
+   </children>
+</VBox>

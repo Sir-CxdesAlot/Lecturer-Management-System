@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile-javafx",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "--module-path", "C:/Java/javafx-sdk-21.0.8/lib",
+                "--add-modules", "javafx.controls,javafx.fxml",
+                "-d", "bin",
+                "-cp", "lib/mysql-connector-j-9.4.0.jar",
+                "src/Controller/*.java",
+                "src/Data/*.java",
+                "src/Model/*.java",
+                "src/Util/*.java"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "copy-resources",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "xcopy /Y /I /Q src\\View\\*.fxml bin\\View\\ && xcopy /Y /I /Q src\\Util\\*.css bin\\Util\\"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "build-all",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "compile-javafx",
+                "copy-resources"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
