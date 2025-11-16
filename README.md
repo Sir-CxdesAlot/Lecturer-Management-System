@@ -49,3 +49,6 @@ License & contact
 - This repository is available to review and learn from. Reach out to Tayo for questions or demos.
 
 Enjoy exploring the code — more updates coming as new concepts are learned.
+
+**Special Thanks**
+- **Mr. Paul** : Thank you for your mentorship and guidance throughout this project.
