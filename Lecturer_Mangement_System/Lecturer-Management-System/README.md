@@ -1,1 +1,0 @@
-# Lecturer-Management-System
